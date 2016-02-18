@@ -1,3 +1,5 @@
+ofxAvahiClient
 ofxDmx
 ofxJSON
-ofxGui
+ofxSocketIO
+ofxSpacebroClient

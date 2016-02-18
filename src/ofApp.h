@@ -1,9 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+
 #include "ofxDmx.h"
 #include "ofxJSON.h"
-#include "ofxGui.h"
+#include "ofxSpacebroClient.h"
 
 class ofApp : public ofBaseApp{
 
@@ -17,7 +18,8 @@ public:
 
   ofxDmx dmx;
 
-  ofxPanel panel;
-  ofParameter<bool> event1;
-  int eventTimeout;
+  ofxSpacebroClient spacebroClient;
+  ofEvent<ofxSocketIOData&> DMXData;
+
+  void onDMXData(ofxSocketIOData& data);
 };
