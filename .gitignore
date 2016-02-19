@@ -3,6 +3,7 @@
 *.mode1v3
 *.pbxuser
 
+scripts/node_modules
 .svn/
 obj/
 bin/
