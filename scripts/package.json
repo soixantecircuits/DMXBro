@@ -1,12 +1,12 @@
 {
-  "name": "sendDmx",
+  "name": "scripts",
   "version": "1.0.0",
-  "description": "Script that sends signals to trigger dmx",
+  "description": "",
   "main": "sendDmx.js",
   "scripts": {
-    "start": "node sendDmx.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Massamba Diouf",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "spacebro-client": "0.0.11"
