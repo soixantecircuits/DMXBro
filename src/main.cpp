@@ -3,7 +3,8 @@
 
 //========================================================================
 int main( ){
-	ofSetupOpenGL(512,384,OF_WINDOW);			// <-------- setup the GL context
+  ofAppNoWindow window;
+	ofSetupOpenGL(&window, 512,384,OF_WINDOW);			// <-------- setup the GL context
 	ofSetWindowTitle("DMXBro");
 
 	// this kicks off the running of my app
