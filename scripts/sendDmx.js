@@ -1,3 +1,8 @@
+'use strict'
+
+const maxChannel = 64
+const interval = 5 // in seconds
+
 const spacebroClient = require('spacebro-client')
 
 var actionList = [
@@ -9,17 +14,14 @@ var actionList = [
   }
 ]
 
-// spacebroClient.iKnowMyMaster('127.0.0.1', '8888')
 spacebroClient.registerToMaster(actionList, 'sendDmx')
 
 setInterval(function () {
-  for (var i = 1; i <= 255; i++) {
+  for (let i = 1; i <= maxChannel; i++) {
     spacebroClient.emit('DMX-data', {channel: i, level: 255})
+    setTimeout(function () {
+      spacebroClient.emit('DMX-data', {channel: i, level: 1})
+    }, (interval * 1000) / 2)
   }
-}, 10000)
+}, (interval * 1000))
 
-setTimeout(function () {
-  for (var i = 1; i <= 255; i++) {
-    spacebroClient.emit('DMX-data', {channel: i, level: 0})
-  }
-}, 5000)
