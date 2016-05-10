@@ -5,7 +5,7 @@ void ofApp::setup(){
   configFile = "config.json";
   bool parsingSuccessful = config.open(configFile);
   if (parsingSuccessful) {
-    dmx.connect(config["serialPort"].asString());
+    dmx.connect(config["serialPort"].asString(), config["maxChannel"].asInt());
   } else {
     ofLogError("DMXBro", "Unable to open " + configFile);
     std::exit(0);
