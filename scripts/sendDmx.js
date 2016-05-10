@@ -1,6 +1,6 @@
 'use strict'
 
-const maxChannel = 64
+const maxChannel = require('../bin/data/config.json').maxChannel
 const interval = 5 // in seconds
 
 const spacebroClient = require('spacebro-client')
