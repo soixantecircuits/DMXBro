@@ -1,4 +1,4 @@
 {
   "serialPort": "ttyUSB0",
-  "maxChannel": "24"
+  "maxChannel": 24
 }
