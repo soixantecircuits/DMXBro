@@ -21,5 +21,8 @@ An example script is available in the scripts folder. Once DMXBro is up and runn
 
 ```
 $ cd scripts
+$ npm i
 $ node sendDmx.js
+$ # or
+$ node simple-send.js [channel] [level]
 ```
