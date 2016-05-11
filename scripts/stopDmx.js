@@ -17,7 +17,7 @@ spacebroClient.registerToMaster(actionList, 'sendDmx')
 
 setTimeout(function () {
   for (let i = 1; i <= maxChannel; i++) {
-    spacebroClient.emit('DMX-data', {channel: i, level: 1})
+    spacebroClient.emit('DMX-data', {channel: i, level: 0})
   }
   setTimeout(function () {
     process.exit()
